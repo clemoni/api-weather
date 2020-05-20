@@ -11,14 +11,14 @@ class UI {
     }
 
     printData(data) {
-        this.location.innerText = `${data.location.name} - ${data.location.country}`;
-        this.conditionGeneral.innerText = data.current.condition.text;
+        this.location.textContent = `${data.location.name} - ${data.location.country}`;
+        this.conditionGeneral.textContent = data.current.condition.text;
         this.conditionIcon.setAttribute('src', data.current.condition.icon);
-        this.conditionTemp.innerText = `${data.current.temp_c} C / ${data.current.temp_f} F `;
-        this.humidity.innerText = `Relative humidity ${data.current.humidity}%`;
-        this.uvCloud.innerText = `U.V : ${data.current.uv}  Cloud coverage: ${data.current.cloud}%`;
-        this.feelTemp.innerText = `Feel like: ${data.current.feelslike_c} C / ${data.current.feelslike_f} F`;
-        this.wind.innerText = `Wind: From the ${data.current.wind_dir} at ${data.current.wind_kph}kph. Gusting to ${data.current.gust_kph}`
+        this.conditionTemp.textContent = `${data.current.temp_c} C / ${data.current.temp_f} F `;
+        this.humidity.textContent = `Relative humidity ${data.current.humidity}%`;
+        this.uvCloud.textContent = `U.V : ${data.current.uv}  Cloud coverage: ${data.current.cloud}%`;
+        this.feelTemp.textContent = `Feel like: ${data.current.feelslike_c} C / ${data.current.feelslike_f} F.`;
+        this.wind.textContent = `Wind: From the ${data.current.wind_dir} at ${data.current.wind_kph}kph. Gusting to ${data.current.gust_kph}kph.`
     }
 
     showAlert(message, className) {
